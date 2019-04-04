@@ -1,7 +1,5 @@
 package com.example.myapplication;
 
-import android.content.Context;
-import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
@@ -14,7 +12,6 @@ import static android.support.test.espresso.action.ViewActions.clearText;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static org.junit.Assert.*;
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -34,9 +31,7 @@ public class ExampleInstrumentedTest {
 
         onView(withId(R.id.editText3)).perform(clearText(),typeText("lingbei"));
         onView(withId(R.id.button)).perform(click());
-
         onView(withId(R.id.textView2)).toString().matches("lingbei");
-
 
     }
 }
